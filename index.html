@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessibilidade</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="text">
+<section id="about">
+        <img src="imagem.png" alt="imagem" id="about-pic">
+     
+            <!-- Botão "Aumentar fonte" ligado a função Fontsize do js-->
+          <div class="wrapper">
+<div class="bts">
+<button onclick="FontSize('increase')">+</button>
+<button onclick="FontSize('decrease')">-</button>
+</div>
+
+          <!-- Identificar fontes e cabeçalhos-->
+         <h3 id="h3">Explicação no Código</h3>
+          <p id="p">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          <p id="p" Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </p>
+        </div>
+        <!-- checklist do modo Dark-->
+        <div class="container">
+        <div class="toggle">
+            <input id="switch" type="checkbox" name="theme">
+            <label for="switch">Toggle</label>
+        </div>
+        </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+     </section>
+     </body>
+       <!-- ligação com o arquivo para o modo Dark-->
+     <script src="scripts.js"></script>
+       <!-- cria função FontSize, sekeciona as identificação que sifrerão alterações, altera o estilo nas condicionais de se e senão para aumentar e diminuir a fonte-->
+<script>
+function FontSize(type) {
+var ids=["#about","#p","#h3"];
+ids.forEach(id=>{
+var elemento=document.querySelector(id); var size=window.getComputedStyle(elemento,null).getPropertyValue('font-size'); size=parseFloat(size);
+if(type == 'increase'){
+elemento.style. fontSize=(size+5)+"px";
+}else{
+elemento.style. fontSize=(size-5)+"px";
+}
+})
+}
+</script>
+</html>

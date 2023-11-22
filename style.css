@@ -1,0 +1,137 @@
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: "Ubuntu",sans-serif;
+  box-sizing: border-box;
+}
+
+/*Estilização base da página*/
+html {
+    height: 100%;
+    font-family: 'Montserrat';
+
+    display: grid;
+    align-items: center;
+    justify-items: center;
+
+    --bg: #FCFCFC;
+    --bg-panel: #EBEBEB;
+    --color-headings: #fffff;
+    --color-text: ##232a46;
+}
+
+/*Chama a variável do background */
+body {
+    background-color: var(--bg);
+}
+
+/*Chama variável do cabeçalho */
+h3 {
+font-size:30px ;
+    margin: 0;
+    color: var(--color-headings);
+}
+
+/*Chama variável do Texto */
+p {
+    color: var(--color-text);
+    
+}
+
+/*checkbox DarkMode */
+input[type=checkbox]{
+    height: 0;
+    width: 0;
+    visibility: hidden;
+  
+}
+
+label {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 52px;
+    height: 27px;
+    background: grey;
+    float: right;
+    border-radius: 100px;
+    position: relative;
+}
+
+label::after{
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 90px;
+    transition: 0.3s;
+}
+
+/*Acessa as variáveis do cabeçalho após o checklist do Dark mode*/
+input:checked + label {
+    background-color: var(--color-headings);
+}
+
+input:checked + label::after {
+    left: calc(100% - 5px);
+    transform: translateX(-100%);
+}
+
+label:active:after {
+    width: 45px;
+}
+
+/*Estiliza a sessão*/
+section{
+  padding: 300px 50px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+#about-pic{
+  width: 150px;
+  border-radius: 50%;
+  margin-right: 100px;
+  margin:20px 10px 20ps 10px;
+}
+/*Estiliza os botoes da fonte*/
+button{
+  wdth: 180px 80px;
+  border: 2px;
+  border-radius: 10px;
+  background: #070022;
+  color: #F3D5FE;
+  height:30px;
+  width:30px;
+  padding:2px;
+  font-weight:bold;
+  font-size:20px;
+  margin:20px 10px 20px 10px ;
+}
+.bts{
+display: flex;
+}
+
+/*Identificações principais*/
+p.h3{
+margin: 10px;
+}
+ 
+
+/*responsive*/
+
+  .about-pic{
+    margin: 0 auto 30px;
+    align-items: center;
+  }
+
+@media screen and (max-width: 600px){
+ 
+  }
+  
